@@ -1,7 +1,7 @@
-import Button from "@/app/components/Button";
+import Button from "@/components/Button";
 import React from "react";
 import Image from "next/image";
-import thumb from "@/public/images/thumb.jpeg";
+import thumb from "@/public/images/Cover.jpeg";
 export default function Mission() {
   return (
     <section className="mt-10">
