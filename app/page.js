@@ -1,3 +1,5 @@
+import PopularCourses from "@/components/PopularCourses";
+
 export default function Home() {
   return (
     <main>
@@ -7,6 +9,7 @@ export default function Home() {
         lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
         lorem lorem lorem lorem lorem lorem lorem lorem lorem
       </section>
+      <PopularCourses />
     </main>
   );
 }
