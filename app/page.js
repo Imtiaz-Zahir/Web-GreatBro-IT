@@ -1,4 +1,5 @@
-import PopularCourses from "@/components/PopularCourses";
+import PopularCourses from "@/components/home/PopularCourses";
+import WhyExceptional from "@/components/home/WhyExceptional";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         lorem lorem lorem lorem lorem lorem lorem lorem lorem
       </section>
       <PopularCourses />
+      <WhyExceptional/>
     </main>
   );
 }
