@@ -1,11 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Exceptional from "@/public/images/exceptional.png"
 
 export default function WhyExceptional() {
   return (
     <section className="max-w-[1320px] mx-auto my-[75px] grid grid-cols-2 gap-16">
-      <Image src="/download.jpg" height={500} width={5000} alt="l"/>
+      <Image className="rounded-lg" src={Exceptional}  alt="GreatBro-IT Image Exceptional"/>
       <div>
         <h1 className="text-5xl font-semibold">Why We’re Exceptional</h1>
         <p className="my-7">

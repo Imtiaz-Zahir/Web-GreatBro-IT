@@ -4,7 +4,7 @@ import CourseCart from "../CourseCart";
 
 export default function PopularCourses() {
   return (
-    <section className="max-w-[1320px] mx-auto my-[75px]">
+    <section className="max-w-[1320px] mx-auto my-[75px] mt-40">
       <div className="flex justify-between mb-[30px]">
         <div>
           <p className="font-medium text-xl">Top Courses</p>
@@ -12,7 +12,7 @@ export default function PopularCourses() {
         </div>
         <Link
           href="/courses"
-          className="px-[30px] py-4 rounded-md buttonBG flex mb-auto items-center text-white"
+          className="px-[30px] py-4 rounded-md bg-sky-500 flex mb-auto items-center text-white"
         >
           All Course View
           <svg
@@ -33,9 +33,9 @@ export default function PopularCourses() {
         <li>Wordpress</li>
       </ul>
       <div className="grid grid-cols-3 gap-6">
-        <CourseCart/>
-        <CourseCart/>
-        <CourseCart/>
+        <CourseCart />
+        <CourseCart />
+        <CourseCart />
       </div>
     </section>
   );

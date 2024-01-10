@@ -14,10 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {3
   
   return (
-    <html lang="en" className="p-6">
+    <html lang="en" >
       <body className={poppins.className}>
        <Nav></Nav>
-        <hr />
         {children}
         <Footer></Footer>
       </body>
