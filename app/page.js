@@ -1,11 +1,9 @@
-import PopularCourses from "@/components/home/PopularCourses";
-import WhyExceptional from "@/components/home/WhyExceptional";
+import HomePage from "@/components/HomePage/HomePage";
 
 export default function Home() {
   return (
     <main>
-      <PopularCourses />
-      <WhyExceptional />
+      <HomePage />
     </main>
   );
 }

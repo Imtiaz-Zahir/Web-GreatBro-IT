@@ -5,11 +5,16 @@ import Logo from "@/public/images/Logo.jpeg";
 
 export default function Nav() {
   return (
-    <section className="fixed  top-0 w-full bg-[#E0F6FE]">
+    <section className="fixed  top-0 w-full bg-sky-100">
       <section className="">
-        <nav className="flex h-[100px] max-w-[1320px] items-center justify-evenly ">
+        <nav className="flex h-[100px] max-w-[1320px] items-center justify-evenly m-auto">
           <Link href="/">
-            <Image height={50} src={Logo} alt="Logo GreatBro IT" />
+            <Image
+              className="rounded-md"
+              height={50}
+              src={Logo}
+              alt="Logo GreatBro IT"
+            />
           </Link>
           <ul className="flex items-center">
             <Link href="/">
@@ -49,7 +54,7 @@ export default function Nav() {
               </li>
             </Link>
           </ul>
-          <div className="rounded-md bg-sky-500 px-7 py-4 text-white  hover:bg-sky-400">
+          <div className="rounded-md bg-sky-500 px-7 py-4 text-white   hover:bg-sky-400">
             <Link href="/login" className=" flex items-center gap-1 ">
               <svg
                 width={24}

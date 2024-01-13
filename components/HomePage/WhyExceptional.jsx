@@ -1,12 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Exceptional from "@/public/images/exceptional.png"
+import Exceptional from "@/public/images/exceptional.png";
 
 export default function WhyExceptional() {
   return (
-    <section className="max-w-[1320px] mx-auto my-[75px] grid grid-cols-2 gap-16">
-      <Image className="rounded-lg" src={Exceptional}  alt="GreatBro-IT Image Exceptional"/>
+    <section className="mx-auto my-[75px] grid lg:max-w-[1320px] grid-cols-2 gap-16">
+      <Image
+        className="rounded-lg"
+        src={Exceptional}
+        alt="GreatBro-IT Image Exceptional"
+      />
       <div>
         <h1 className="text-5xl font-semibold">Why We’re Exceptional</h1>
         <p className="my-7">
@@ -19,22 +23,22 @@ export default function WhyExceptional() {
           learning experience.
         </p>
         <div></div>
-        <ul className="my-12 grid grid-cols-2 justify-between items-center gap-y-5 text-lg font-medium list-inside list-image-[url(../public/check.svg)]">
-            <li>Free Seminar</li>
-            <li>Provide Best Support</li>
-            <li>Expert Many Teacher</li>
-            <li>Lifetime access</li>
+        <ul className="my-12 grid list-inside list-image-[url(../public/check.svg)] grid-cols-2 items-center justify-between gap-y-5 text-lg font-medium">
+          <li>Free Seminar</li>
+          <li>Provide Best Support</li>
+          <li>Expert Many Teacher</li>
+          <li>Lifetime access</li>
         </ul>
         <Link
           href="/courses"
-          className="px-[30px] py-4 rounded-md border border-[#2492EB] text-[#2492EB] inline-flex items-center"
+          className="inline-flex items-center rounded-md border border-sky-500 px-8 py-4 text-sky-500 hover:bg-sky-500 hover:text-white"
         >
           More About
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             id="angle-right-b"
-            className="ml-[10px] w-5 h-5"
+            className="ml-[10px] h-5 w-5"
           >
             <path
               fill="#2492EB"
