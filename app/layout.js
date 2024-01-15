@@ -4,19 +4,23 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
-const poppins = Poppins({weight:["100","200","300","400","500","600","700","800","900"],subsets:["latin"]})
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "GreatBro-IT",
   description: "GreatBro-IT a skill development platform",
 };
 
-export default function RootLayout({ children }) {3
-  
+export default function RootLayout({ children }) {
+  3;
+
   return (
-    <html lang="en" >
+    <html lang="en">
       <body className={poppins.className}>
-       <Nav></Nav>
+        <Nav></Nav>
         {children}
         <Footer></Footer>
       </body>

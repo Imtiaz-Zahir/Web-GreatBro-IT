@@ -1,17 +1,15 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 
-export default function Button() {
+const Button = (props) => {
   return (
-    <div>
-      <div className="mt-5">
-        <button
-          className="bg-green-500 rounded-sm px-4 py-1"
-          onClick={() => console.log("I have clicked here")}
-        >
-          Click Here 
-        </button>
-      </div>
-    </div>
+    <Link href="/login" className="my-7 md:my-0">
+      <button className="my-7 rounded-md bg-sky-400  px-7 py-4 text-xl text-white md:my-0  md:ml-8 md:px-3 md:py-1  md:text-sm">
+        {props.children}
+      </button>
+    </Link>
   );
-}
+};
+
+export default Button;

@@ -4,11 +4,13 @@ import CourseCart from "./CourseCart";
 
 export default function PopularCourses() {
   return (
-    <section className="mx-auto my-[75px] mt-40 lg:max-w-[1320px]">
+    <section className="mx-auto bg-black px-20 py-40 lg:max-w-[1320px]">
       <div className="mb-[30px] flex justify-between">
         <div>
           <p className="text-xl font-medium text-sky-500">Top Courses</p>
-          <h1 className="text-4xl font-semibold">Most Popular Courses</h1>
+          <h1 className="text-4xl font-semibold text-white">
+            Most Popular Courses
+          </h1>
         </div>
         <Link
           href="/courses"
@@ -28,7 +30,7 @@ export default function PopularCourses() {
           </svg>
         </Link>
       </div>
-      <ul className="mb-[75px] flex list-inside list-none items-center gap-x-[30px] ">
+      <ul className="mb-[75px] flex list-inside list-none flex-wrap items-center gap-8 ">
         <Link
           href="/"
           className="rounded-md border border-sky-500 px-3 py-1 text-sky-500 hover:bg-sky-500 hover:text-white"
@@ -66,7 +68,7 @@ export default function PopularCourses() {
           Front-End Web Development
         </Link>
       </ul>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="ap-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         <CourseCart />
         <CourseCart />
         <CourseCart />

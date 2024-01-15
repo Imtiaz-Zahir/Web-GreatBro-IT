@@ -5,13 +5,13 @@ import Exceptional from "@/public/images/exceptional.png";
 
 export default function WhyExceptional() {
   return (
-    <section className="mx-auto my-[75px] grid lg:max-w-[1320px] grid-cols-2 gap-16">
+    <section className="courseCartShadow mx-auto my-[75px] grid justify-items-center gap-8 rounded-lg bg-black p-10 text-white sm:grid-cols-1 lg:max-w-[1320px] lg:grid-cols-2 lg:gap-16">
       <Image
         className="rounded-lg"
         src={Exceptional}
         alt="GreatBro-IT Image Exceptional"
       />
-      <div>
+      <div className="">
         <h1 className="text-5xl font-semibold">Why We’re Exceptional</h1>
         <p className="my-7">
           Learn with bdCalling offers various courses and upon successful
@@ -31,7 +31,7 @@ export default function WhyExceptional() {
         </ul>
         <Link
           href="/courses"
-          className="inline-flex items-center rounded-md border border-sky-500 px-8 py-4 text-sky-500 hover:bg-sky-500 hover:text-white"
+          className="inline-flex items-center rounded-md border border-sky-500 px-8 py-4  hover:bg-sky-500 "
         >
           More About
           <svg

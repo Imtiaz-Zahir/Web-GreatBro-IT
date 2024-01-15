@@ -1,77 +1,84 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/images/Logo.jpeg";
+import Button from "./Button";
 
 export default function Nav() {
+  let [open, setOpen] = useState(false);
+  let Links = [
+    { name: "Home", link: "/" },
+    { name: "About Us", link: "/about" },
+    { name: "Blogs", link: "/blogs" },
+    { name: "Contact Us", link: "/contact" },
+  ];
   return (
-    <section className="fixed  top-0 w-full bg-sky-100">
-      <section className="">
-        <nav className="flex h-[100px] max-w-[1320px] items-center justify-evenly m-auto">
-          <Link href="/">
-            <Image
-              className="rounded-md"
-              height={50}
-              src={Logo}
-              alt="Logo GreatBro IT"
-            />
-          </Link>
-          <ul className="flex items-center">
-            <Link href="/">
-              <li className="rounded-md  px-7 py-4 hover:bg-sky-400  hover:text-white">
-                Home
-              </li>
-            </Link>
-            <Link href="/about">
-              <li className="rounded-md  px-7 py-4 hover:bg-sky-400  hover:text-white">
-                About Us
-              </li>
-            </Link>
-            <Link href="/courses" className="">
-              <li className="flex  items-center rounded-md px-7 py-4 hover:bg-sky-400 hover:text-white ">
-                <span>Courses</span>
-                <svg
-                  width={24}
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  id="angle-down"
-                >
-                  <path
-                    fill="000"
-                    d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"
-                  ></path>
-                </svg>
-              </li>
-            </Link>
-            <Link href="/blogs">
-              <li className="rounded-md  px-7 py-4 hover:bg-sky-400  hover:text-white">
-                Blogs
-              </li>
-            </Link>
-            <Link href="/contact">
-              <li className="rounded-md  px-7 py-4 hover:bg-sky-400  hover:text-white">
-                Contact Us
-              </li>
-            </Link>
-          </ul>
-          <div className="rounded-md bg-sky-500 px-7 py-4 text-white   hover:bg-sky-400">
-            <Link href="/login" className=" flex items-center gap-1 ">
-              <svg
-                width={24}
-                xmlns="http://www.w3.org/2000/svg"
-                data-name="Layer 1"
-                viewBox="0 0 24 24"
-                id="user-circle"
-              >
-                <path
-                  fill="white"
-                  d="M12,2A10,10,0,0,0,4.65,18.76h0a10,10,0,0,0,14.7,0h0A10,10,0,0,0,12,2Zm0,18a8,8,0,0,1-5.55-2.25,6,6,0,0,1,11.1,0A8,8,0,0,1,12,20ZM10,10a2,2,0,1,1,2,2A2,2,0,0,1,10,10Zm8.91,6A8,8,0,0,0,15,12.62a4,4,0,1,0-6,0A8,8,0,0,0,5.09,16,7.92,7.92,0,0,1,4,12a8,8,0,0,1,16,0A7.92,7.92,0,0,1,18.91,16Z"
-                ></path>
-              </svg>
-              <span>login</span>
+    <section className="fixed top-0 z-50 w-full   bg-black  lg:w-full">
+      <section className="m-auto w-full lg:max-w-[1320px]">
+        <div className="px-7 py-4  md:flex md:items-center md:justify-between md:px-10">
+          <div
+            className="flex cursor-pointer items-center font-[Poppins] text-2xl font-bold
+      text-gray-800"
+          >
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                className="rounded-md"
+                height={50}
+                src={Logo}
+                alt="Logo GreatBro IT"
+              />
+              <span className="text-white"> GreatBro-IT</span>
             </Link>
           </div>
-        </nav>
+
+          <div
+            onClick={() => setOpen(!open)}
+            className="absolute right-8 top-6 w-14 cursor-pointer  md:hidden"
+          >
+            {open ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                id="times"
+              >
+                <path
+                  fill="#fff"
+                  d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"
+                ></path>
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                id="bars"
+              >
+                <path
+                  fill="#fff"
+                  d="M3,8H21a1,1,0,0,0,0-2H3A1,1,0,0,0,3,8Zm18,8H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Zm0-5H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z"
+                ></path>
+              </svg>
+            )}
+          </div>
+
+          <ul
+            className={`absolute left-0 z-[-1]  w-full  bg-black pb-12 pl-9 transition-all duration-500 ease-in md:static md:z-auto md:flex md:w-auto md:items-center md:pb-0 md:pl-0 ${
+              open ? "top-20 " : "top-[-490px]"
+            }`}
+          >
+            {Links.map((link) => (
+              <li key={link.name} className="my-7 md:my-0">
+                <Link
+                  href={link.link}
+                  className="my-7 rounded-md px-7 md:px-3 md:py-1 py-4 text-xl md:text-sm  text-white hover:bg-sky-400 md:my-0  md:ml-8"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+            <Button>Login</Button>
+          </ul>
+        </div>
       </section>
     </section>
   );

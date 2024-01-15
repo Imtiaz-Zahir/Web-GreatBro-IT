@@ -4,14 +4,14 @@ import courseImage from "@/public/images/course-img.png";
 
 export default function CourseCart() {
   return (
-    <div className="courseCartShadow rounded-xl p-5 ">
-      <Image src={courseImage} alt="download" className="rounded-md" />
+    <div className="courseCartShadow overflow-hidden rounded-xl p-5 px-10">
+      <Image src={courseImage} alt="download" className="fit rounded-md" />
       <div className="my-[15px] flex justify-between">
-        <p className="flex items-center">
+        <p className="flex items-center text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            className="mr-[15px] h-6 w-6"
+            className="mr-3 h-6 w-6"
           >
             <path
               fill="#6563FF"
@@ -25,11 +25,11 @@ export default function CourseCart() {
         </p>
       </div>
       <div className="mb-[15px] flex justify-between">
-        <p className="flex items-center">
+        <p className="flex items-center text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            className="mr-[15px] h-6 w-6"
+            className="mr-3 h-6 w-6"
           >
             <path
               fill="#6563FF"
@@ -38,11 +38,11 @@ export default function CourseCart() {
           </svg>
           15 Seats Left
         </p>
-        <p className="flex items-center">
+        <p className="flex items-center text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            className="mr-[15px] h-6 w-6"
+            className="mr-3 h-6 w-6"
           >
             <path
               fill="#6563FF"
@@ -53,18 +53,21 @@ export default function CourseCart() {
         </p>
       </div>
       <hr />
-      <h2 className="my-[15px] text-lg font-semibold">
+      <h2 className="my-[15px] text-lg font-semibold text-white">
         Certified UI/UX Designer Course{" "}
       </h2>
       <div className="">
         <div className="mb-5 flex items-center justify-between">
-          <p className="text-xl font-semibold">
+          <p className="text-xl font-semibold text-white">
             15,000BDT
-            <del className="ml-[10px] text-base font-normal">18,000BDT</del>
+            <span>
+              {" "}
+              <del className="ml-[10px] text-base font-normal">18,000BDT</del>
+            </span>
           </p>
           <Reating />
         </div>
-        <button className="w-full rounded-md border border-sky-500 py-3 hover:bg-sky-500 hover:text-white">
+        <button className="w-full rounded-md border border-sky-500 py-3 text-white hover:bg-sky-500">
           Enroll Now
         </button>
       </div>
@@ -74,8 +77,8 @@ export default function CourseCart() {
 
 function Reating() {
   return (
-    <p className="flex items-center">
-      <span className="mr-1 flex">
+    <p className="flex items-center text-white">
+      <span className="mr-1  flex">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
