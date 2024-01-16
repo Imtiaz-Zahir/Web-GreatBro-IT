@@ -4,7 +4,7 @@ import CourseCart from "./CourseCart";
 
 export default function PopularCourses() {
   return (
-    <section className="mx-auto bg-black px-20 py-40 lg:max-w-[1320px]">
+    <section className="mx-auto bg-black px-5 py-20 lg:max-w-[1320px]">
       <div className="mb-[30px] flex justify-between">
         <div>
           <p className="text-xl font-medium text-sky-500">Top Courses</p>
