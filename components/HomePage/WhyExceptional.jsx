@@ -14,7 +14,7 @@ export default function WhyExceptional() {
       <div className="">
         <h1 className="text-5xl font-semibold">Why We’re Exceptional</h1>
         <p className="my-7">
-          Learn with bdCalling offers various courses and upon successful
+         GreatBro-IT offers various courses and upon successful
           completion, we offer job opportunities within our company.
           Additionally, we provide scholarships in different categories to
           support aspiring individuals. We guarantee a refund if anyone is
