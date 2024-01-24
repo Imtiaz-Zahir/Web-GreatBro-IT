@@ -8,6 +8,8 @@ export default function WhyExceptional() {
       <Image
         className="rounded-lg"
         src="/images/exceptional.png"
+        height={500}
+        width={560}
         alt="GreatBro-IT Image Exceptional"
       />
       <div className="">

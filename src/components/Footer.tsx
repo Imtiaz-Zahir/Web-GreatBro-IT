@@ -14,6 +14,7 @@ export default function Footer() {
             >
               <Image
                 className="rounded-md"
+                height={30}
                 width={30}
                 src="/images/Logo.jpeg"
                 alt="logo of GreatBro-IT"

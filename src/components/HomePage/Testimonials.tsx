@@ -33,6 +33,8 @@ export default function Testimonials() {
                   <Image
                     alt="testimonial"
                     src="/images/himel.jpeg"
+                    height={48}
+                    width={48}
                     className="h-12 w-12 flex-shrink-0 rounded-full object-cover object-center"
                   />
                   <span className="flex flex-grow flex-col pl-4">
@@ -66,6 +68,8 @@ export default function Testimonials() {
                   <Image
                     alt="testimonial"
                     src="/images/himel.jpeg"
+                    height={48}
+                    width={48}
                     className="h-12 w-12 flex-shrink-0 rounded-full object-cover object-center"
                   />
                   <span className="flex flex-grow flex-col pl-4">
