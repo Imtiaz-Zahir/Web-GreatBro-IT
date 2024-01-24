@@ -37,9 +37,9 @@ model Course {
   Enrollment       Enrollment[]
   Review           Review[]
   LearningPoint    LearningPoint[]
-  SoftwareUsed     SoftwareUsed[]
-  JobPositions     JobPositions[]
   CarrerOpertunity CarrerOpertunity[]
+  UsedSoftware     UsedSoftware[]
+  JobPosition      JobPosition[]
 }
 
 enum level {
@@ -61,14 +61,14 @@ model LearningPoint {
   courseId String
 }
 
-model SoftwareUsed {
+model UsedSoftware {
   id       String @id @default(uuid())
   name     String
   course   Course @relation(fields: [courseId], references: [id])
   courseId String
 }
 
-model JobPositions {
+model JobPosition {
   id       String @id @default(uuid())
   name     String
   course   Course @relation(fields: [courseId], references: [id])
@@ -84,19 +84,25 @@ model CarrerOpertunity {
 
 model Lesson {
   id       String    @id @default(uuid())
+  number   Int
   name     String
   course   Course    @relation(fields: [courseId], references: [id])
   courseId String
   Lecture  Lecture[]
+
+  @@unique([number, courseId])
 }
 
 model Lecture {
   id       String @id @default(uuid())
+  number   Int
   name     String
   url      String
   length   Int
   lesson   Lesson @relation(fields: [lessonId], references: [id])
   lessonId String
+
+  @@unique([number, lessonId])
 }
 
 // model Instructor {
