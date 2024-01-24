@@ -24,6 +24,7 @@ export default function Nav() {
               <Image
                 className="rounded-md"
                 height={50}
+                width={50}
                 src="/images/Logo.jpeg"
                 alt="Logo GreatBro IT"
               />

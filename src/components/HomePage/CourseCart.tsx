@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function CourseCart() {
   return (
     <div className="courseCartShadow overflow-hidden rounded-xl p-5 px-10">
-      <Image src="/images/course-img.png" alt="download" className="fit rounded-md" />
+      <Image src="/images/course-img.png" alt="download" height={215} width={335} className="fit rounded-md" />
       <div className="my-[15px] flex justify-between">
         <p className="flex items-center text-white">
           <svg

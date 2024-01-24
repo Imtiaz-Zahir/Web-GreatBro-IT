@@ -17,7 +17,7 @@ export default function Mission() {
         </p>
       </div>
       <div className="w-[400px]">
-        <Image src="/images/Cover.jpeg" alt="image"></Image>
+        <Image src="/images/Cover.jpeg" alt="image" height={180} width={400}></Image>
       </div>
       <Button></Button>
     </section>

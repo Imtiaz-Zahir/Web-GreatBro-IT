@@ -33,6 +33,8 @@ export default function Hero() {
         </div>
         <div className="relative">
           <Image
+            height={600}
+            width={500}
             src="/images/hero.jpeg"
             alt="hero section image"
             className="relative z-0		  h-[600px]  w-[500px] rounded-b-full bg-gray-400  object-cover"
