@@ -3,7 +3,7 @@ import "./globals.css";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-
+import Providers from "./providers";
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
@@ -21,10 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-black text-white ${poppins.className}`}>
-        <Nav></Nav>
-        {children}
-        <Footer></Footer>
+      <body className={` ${poppins.className}`}>
+        <Providers>
+          <Nav></Nav>
+          {children}
+          <Footer></Footer>
+        </Providers>
       </body>
     </html>
   );

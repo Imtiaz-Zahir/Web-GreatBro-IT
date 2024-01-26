@@ -2,18 +2,20 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Button from "./Button";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Nav() {
   let [open, setOpen] = useState(false);
   let Links = [
     { name: "Home", link: "/" },
+    { name: "Courses", link: "/courses" },
     { name: "About Us", link: "/about" },
     { name: "Blogs", link: "/blogs" },
     { name: "Contact Us", link: "/contact" },
+    { name: "Login", link: "/login" },
   ];
   return (
-    <section className="fixed top-0 z-50 w-full   bg-black  lg:w-full">
+    <section className="dark:bg-gbDark fixed top-0 z-50  w-full lg:w-full bg-gbSkyV2">
       <section className="m-auto w-full lg:max-w-[1320px]">
         <div className="px-7 py-4  md:flex md:items-center md:justify-between md:px-10">
           <div
@@ -28,7 +30,10 @@ export default function Nav() {
                 src="/images/Logo.jpeg"
                 alt="Logo GreatBro IT"
               />
-              <span className="text-white"> GreatBro-IT</span>
+              <span className="text-gbDark dark:text-gbWhite font-sans  ">
+                {" "}
+                GreatBro-IT
+              </span>
             </Link>
           </div>
 
@@ -62,24 +67,25 @@ export default function Nav() {
           </div>
 
           <ul
-            className={`absolute left-0 z-[-1]  w-full  bg-black pb-12 pl-9 transition-all duration-500 ease-in md:static md:z-auto md:flex md:w-auto md:items-center md:pb-0 md:pl-0 ${
+            className={`absolute left-0 dark:bg-gbDark bg-gbSkyV2 z-[-1]  w-full   pb-12 pl-9 transition-all duration-500 ease-in md:static md:z-auto md:flex md:w-auto md:items-center md:pb-0 md:pl-0 ${
               open ? "top-20 " : "top-[-490px]"
             }`}
           >
-            {Links.map((link) => (
-              <li key={link.name} className="my-7 md:my-0">
+            {Links.map((link, index) => (
+              <li key={index} className="my-7 md:my-0">
                 <Link
                   href={link.link}
-                  className="my-7 rounded-md px-7 md:px-3 md:py-1 py-4 text-xl md:text-sm  text-white hover:bg-sky-400 md:my-0  md:ml-8"
+                  className="hover:bg-gbBlue hover:text-gbWhite my-7 rounded-md px-7  py-4 text-xl md:my-0 md:ml-8 md:px-3  md:py-1 md:text-sm lg:px-4  lg:py-3"
                 >
                   {link.name}
                 </Link>
               </li>
             ))}
-            <Button>Login</Button>
+            <ThemeToggle></ThemeToggle>
           </ul>
         </div>
       </section>
+      {/* <hr /> */}
     </section>
   );
 }
