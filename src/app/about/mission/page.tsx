@@ -16,10 +16,15 @@ export default function Mission() {
           velit magni ea nemo praesentium.
         </p>
       </div>
-      <div className="w-[400px]">
-        <Image src="/images/Cover.jpeg" alt="image" height={180} width={400}></Image>
+      <div className="w-[800px]">
+        <Image
+          src="/images/Cover.jpeg"
+          alt="image"
+          height={580}
+          width={800}
+        ></Image>
       </div>
-      <Button></Button>
+      <Button>Button</Button>
     </section>
   );
 }

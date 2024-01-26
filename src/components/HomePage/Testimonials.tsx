@@ -3,16 +3,16 @@ import Image from "next/image";
 
 export default function Testimonials() {
   return (
-    <section className="flex flex-col text-white bg-black items-center">
+    <section className="dark:bg-gbDark flex flex-col  items-center ">
       <section>
         <h4 className="ml-24 text-2xl">Our Testimonials</h4>
         <h2 className="text-4xl">What our Student say</h2>
       </section>
-      <section className="body-font text-gray-600">
+      <section className="body-font text-gbMute">
         <div className="container mx-auto px-5 py-24">
           <div className="-m-4 flex flex-wrap">
-            <div className="w-full p-4 md:w-1/2">
-              <div className="h-full rounded bg-sky-100 p-8">
+            <div className=" w-full p-4 md:w-1/2 ">
+              <div className="bg-gbSkyV2 h-full rounded p-8 shadow-lg hover:shadow-2xl ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill=""
@@ -47,7 +47,7 @@ export default function Testimonials() {
               </div>
             </div>
             <div className="w-full p-4 md:w-1/2">
-              <div className="h-full rounded bg-sky-100 p-8">
+              <div className="h-full rounded bg-sky-100 p-8 shadow-lg hover:shadow-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill=""

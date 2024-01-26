@@ -7,7 +7,7 @@ import Hero from "./Hero";
 
 export default function HomePage() {
   return (
-    <main className="bg-black">
+    <main className="">
       <Hero />
       <PopularCourses />
       <WhyExceptional />

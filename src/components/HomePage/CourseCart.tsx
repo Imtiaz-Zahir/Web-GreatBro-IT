@@ -3,10 +3,16 @@ import Image from "next/image";
 
 export default function CourseCart() {
   return (
-    <div className="courseCartShadow overflow-hidden rounded-xl p-5 px-10">
-      <Image src="/images/course-img.png" alt="download" height={215} width={335} className="fit rounded-md" />
+    <div className=" border-gbSky hover:border-gbBlue group overflow-hidden rounded-xl border p-5 px-10 shadow-lg hover:shadow-2xl">
+      <Image
+        src="/images/course-img.png"
+        alt="download"
+        height={215}
+        width={335}
+        className="fit rounded-md"
+      />
       <div className="my-[15px] flex justify-between">
-        <p className="flex items-center text-white">
+        <p className="flex items-center ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -19,12 +25,12 @@ export default function CourseCart() {
           </svg>
           Batch 3
         </p>
-        <p className="rounded bg-sky-500 px-3 text-white hover:bg-sky-400">
+        <p className="group-hover:bg-gbBlue text-gbWhite rounded  bg-sky-500 px-3">
           Offline
         </p>
       </div>
       <div className="mb-[15px] flex justify-between">
-        <p className="flex items-center text-white">
+        <p className="flex items-center ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -37,7 +43,7 @@ export default function CourseCart() {
           </svg>
           15 Seats Left
         </p>
-        <p className="flex items-center text-white">
+        <p className="flex items-center ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -52,21 +58,21 @@ export default function CourseCart() {
         </p>
       </div>
       <hr />
-      <h2 className="my-[15px] text-lg font-semibold text-white">
+      <h2 className="my-[15px] text-lg font-semibold ">
         Certified UI/UX Designer Course{" "}
       </h2>
       <div className="">
         <div className="mb-5 flex items-center justify-between">
-          <p className="text-xl font-semibold text-white">
+          <p className="text-xl font-semibold ">
             15,000BDT
             <span>
               {" "}
               <del className="ml-[10px] text-base font-normal">18,000BDT</del>
             </span>
           </p>
-          <Reating />
+          <Rating />
         </div>
-        <button className="w-full rounded-md border border-sky-500 py-3 text-white hover:bg-sky-500">
+        <button className="group-hover:border-gbBlue hover:bg-gbBlue w-full rounded-md border  border-sky-500 py-3">
           Enroll Now
         </button>
       </div>
@@ -74,9 +80,9 @@ export default function CourseCart() {
   );
 }
 
-function Reating() {
+function Rating() {
   return (
-    <p className="flex items-center text-white">
+    <p className="flex items-center ">
       <span className="mr-1  flex">
         <svg
           xmlns="http://www.w3.org/2000/svg"
