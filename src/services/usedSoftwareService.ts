@@ -1,12 +1,12 @@
-import { PrismaClient } from "@prisma/client";
+import { Prisma, PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-function getJobPositions() {
-  return prisma.jobPosition.findMany();
+function getJobPositions(where?: Prisma.JobPositionWhereInput) {
+  return prisma.jobPosition.findMany({ where });
 }
 
-function getJobPosition(id: string) {
-  return prisma.jobPosition.findUnique({ where: { id } });
+function getJobPosition(where: Prisma.JobPositionWhereUniqueInput) {
+  return prisma.jobPosition.findUnique({ where });
 }
 
 function createJobPosition(name: string, courseId: string) {

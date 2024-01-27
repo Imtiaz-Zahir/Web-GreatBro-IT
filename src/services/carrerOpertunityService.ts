@@ -1,12 +1,12 @@
-import { PrismaClient } from "@prisma/client";
+import { Prisma, PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-function getCarrerOpertunities() {
-  return prisma.carrerOpertunity.findMany();
+function getCarrerOpertunities(where?: Prisma.CarrerOpertunityWhereInput) {
+  return prisma.carrerOpertunity.findMany({where});
 }
 
-function getCarrerOpertunity(id: string) {
-  return prisma.carrerOpertunity.findUnique({ where: { id } });
+function getCarrerOpertunity(where: Prisma.CarrerOpertunityWhereUniqueInput) {
+  return prisma.carrerOpertunity.findUnique({ where });
 }
 
 function createCarrerOpertunity(description: string, courseId: string) {

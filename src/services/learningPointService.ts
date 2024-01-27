@@ -1,12 +1,12 @@
-import { PrismaClient } from "@prisma/client";
+import { Prisma, PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-function getLearningPoints() {
-  return prisma.learningPoint.findMany();
+function getLearningPoints(where?: Prisma.LearningPointWhereInput) {
+  return prisma.learningPoint.findMany({where});
 }
 
-function getLearningPoint(id: string) {
-  return prisma.learningPoint.findUnique({ where: { id } });
+function getLearningPoint(where: Prisma.LearningPointWhereUniqueInput) {
+  return prisma.learningPoint.findUnique({ where });
 }
 
 function createLearningPoint(name: string, courseId: string) {
