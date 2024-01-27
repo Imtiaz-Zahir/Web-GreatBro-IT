@@ -32,7 +32,7 @@ model Course {
   price            Int
   level            level
   categoryId       String
-  Category         Category           @relation(fields: [categoryId], references: [id])
+  category         Category           @relation(fields: [categoryId], references: [id])
   lessons          Lesson[]
   Enrollment       Enrollment[]
   Review           Review[]
@@ -50,8 +50,8 @@ enum level {
 
 model Category {
   id     String   @id @default(uuid())
-  name   String
-  course Course[]
+  name   String   @unique
+  Course Course[]
 }
 
 model LearningPoint {

@@ -1,12 +1,12 @@
 import { PrismaClient, Prisma } from "@prisma/client";
 const prisma = new PrismaClient();
 
-function getLectures() {
-  return prisma.lecture.findMany();
+function getLectures(where?: Prisma.LectureWhereInput) {
+  return prisma.lecture.findMany({ where });
 }
 
-function getLecture(id: string) {
-  return prisma.lecture.findUnique({ where: { id } });
+function getLecture(where: Prisma.LectureWhereUniqueInput) {
+  return prisma.lecture.findUnique({ where });
 }
 
 function createLecture(data: Prisma.LectureCreateInput) {

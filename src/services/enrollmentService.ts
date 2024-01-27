@@ -1,12 +1,12 @@
 import { PrismaClient, Prisma } from "@prisma/client";
 const prisma = new PrismaClient();
 
-function getEnrollments() {
-  return prisma.enrollment.findMany();
+function getEnrollments(where?: Prisma.EnrollmentWhereInput) {
+  return prisma.enrollment.findMany({where});
 }
 
-function getEnrollment(id: string) {
-  return prisma.enrollment.findUnique({ where: { id } });
+function getEnrollment(where: Prisma.EnrollmentWhereUniqueInput) {
+  return prisma.enrollment.findUnique({ where });
 }
 
 function createEnrollment(data: Prisma.EnrollmentCreateInput) {

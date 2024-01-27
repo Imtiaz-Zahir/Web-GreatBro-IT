@@ -4,13 +4,17 @@ const prisma = new PrismaClient();
 function getCourses(
   skip?: number,
   take?: number,
-  include?: Prisma.CourseInclude
+  where?: Prisma.CourseWhereInput,
+  include?: Prisma.CourseInclude,
 ) {
-  return prisma.course.findMany({ take, skip, include });
+  return prisma.course.findMany({ where, take, skip, include });
 }
 
-function getCourse(id: string, include?: Prisma.CourseInclude) {
-  return prisma.course.findUnique({ where: { id }, include });
+function getCourse(
+  where: Prisma.CourseWhereUniqueInput,
+  include?: Prisma.CourseInclude,
+) {
+  return prisma.course.findUnique({ where, include });
 }
 
 function createCourse(data: Prisma.CourseCreateInput) {

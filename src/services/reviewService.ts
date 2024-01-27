@@ -1,12 +1,12 @@
 import { PrismaClient, Prisma } from "@prisma/client";
 const prisma = new PrismaClient();
 
-function getReviews() {
-  return prisma.review.findMany();
+function getReviews(where?: Prisma.ReviewWhereInput) {
+  return prisma.review.findMany({ where });
 }
 
-function getReview(id: string) {
-  return prisma.review.findUnique({ where: { id } });
+function getReview(where: Prisma.ReviewWhereUniqueInput) {
+  return prisma.review.findUnique({ where });
 }
 
 function createReview(data: Prisma.ReviewCreateInput) {

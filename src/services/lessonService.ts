@@ -1,12 +1,12 @@
 import { PrismaClient, Prisma } from "@prisma/client";
 const prisma = new PrismaClient();
 
-function getLessons() {
-  return prisma.lesson.findMany();
+function getLessons(where?: Prisma.LessonWhereInput) {
+  return prisma.lesson.findMany({ where });
 }
 
-function getLesson(id: string) {
-  return prisma.lesson.findUnique({ where: { id } });
+function getLesson(where: Prisma.LessonWhereUniqueInput) {
+  return prisma.lesson.findUnique({ where });
 }
 
 function createLesson(data: Prisma.LessonCreateInput) {
