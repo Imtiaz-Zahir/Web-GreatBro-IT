@@ -1,7 +1,7 @@
 import type { NextRequest } from "next/server";
 import { getCourse } from "@/services/courseService";
 
-export async function GET({ params }: { params: { courseId: string } }) {
+export async function GET(_:NextRequest,{ params }: { params: { courseId: string } }) {
   try {
     const course = getCourse(params.courseId);
     if (!course) return new Response("Course not found", { status: 404 });
